@@ -6,8 +6,8 @@ void main() {
 }
 
 const List<Color> bgColors = [
-  Color.fromARGB(255, 113, 54, 214),
   Color.fromARGB(255, 43, 6, 107),
+  Color.fromARGB(255, 113, 54, 214),
 ];
 
 class MyApp extends StatelessWidget {

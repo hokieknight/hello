@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello/styled_text.dart';
+import 'package:hello/dice_roller.dart';
 
 class GradientContainer extends StatelessWidget {
   final List<Color> colors;
@@ -9,24 +9,15 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: colors,
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: colors,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
         ),
-      ),
-      width: double.infinity,
-      padding: const EdgeInsets.all(12),
-      child: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          StyledText('Flutter - The Complete Guide 3'),
-          SizedBox(height: 16),
-          StyledText('Hello World'),
-        ],
-      ),
-    );
+        width: double.infinity,
+        padding: const EdgeInsets.all(12),
+        child: const DiceRoller());
   }
 }
