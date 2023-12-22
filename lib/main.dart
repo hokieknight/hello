@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hello/gradient_container.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+const List<Color> bgColors = [
+  Color.fromARGB(255, 113, 54, 214),
+  Color.fromARGB(255, 43, 6, 107),
+];
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,45 +23,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
+          title: const Text('Welcome to Flutter!!'),
         ),
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 113, 54, 214),
-                Color.fromARGB(255, 43, 6, 107),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          width: double.infinity,
-          padding: const EdgeInsets.all(12),
-          child: const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                'Flutter - The Complete Guide Course',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white24,
-                ),
-              ),
-              SizedBox(height: 16),
-              Text(
-                'Learn Flutter step-by-step, from the ground up.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white24,
-                ),
-              ),
-            ],
-          ),
-        ),
+        body: const GradientContainer(bgColors),
       ),
     );
   }
